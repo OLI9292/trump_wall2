@@ -3,7 +3,8 @@
   "parserOptions": {
     "ecmaVersion": 6,
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
+      "experimentalObjectRestSpread": false
     },
     "sourceType": "module"
   },
@@ -26,5 +27,8 @@
     "react/jsx-no-undef": 1,
     "react/jsx-uses-react": 1,
     "react/jsx-uses-vars": 1
+  },
+  modules: {
+    ecmaFeatures: {modules: true}
   }
 }

@@ -14,6 +14,8 @@ const PATHS = {
   build: path.join(__dirname, 'build')
 };
 
+process.env.BABEL_ENV = TARGET;
+
 const common = {
   // entry accepts a path or an object
   entry: {
@@ -38,7 +40,7 @@ const common = {
         loaders: ['babel?cacheDirectory'],
         include: PATHS.app
       }
-    ],
+    ]/*,
     // ESLint rules, http://eslint.org/docs/rules/
     preLoaders: [
       {
@@ -46,7 +48,7 @@ const common = {
         loaders: ['eslint'],
         include: PATHS.app
       }
-    ]
+    ]*/
   },
 };
 
