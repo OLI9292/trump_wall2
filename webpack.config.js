@@ -40,15 +40,7 @@ const common = {
         loaders: ['babel?cacheDirectory'],
         include: PATHS.app
       }
-    ]/*,
-    // ESLint rules, http://eslint.org/docs/rules/
-    preLoaders: [
-      {
-        test: /\.jsx?$/,
-        loaders: ['eslint'],
-        include: PATHS.app
-      }
-    ]*/
+    ]
   },
 };
 
