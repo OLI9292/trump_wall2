@@ -14,6 +14,10 @@ const PATHS = {
   build: path.join(__dirname, 'build')
 };
 
+const devFlagPlugin = new webpack.DefinePlugin({  
+  __DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || 'false'))
+});
+
 process.env.BABEL_ENV = TARGET;
 
 const common = {
@@ -39,6 +43,11 @@ const common = {
         test: /\.jsx?$/,
         loaders: ['babel?cacheDirectory'],
         include: PATHS.app
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'file',
+        include: PATHS.app
       }
     ]
   },
@@ -61,7 +70,9 @@ if (TARGET === 'start' || !TARGET) {
       new webpack.HotModuleReplacementPlugin(),
       new NpmInstallPlugin({
         save: true
-      })
+      }),
+      new webpack.NoErrorsPlugin(),
+      devFlagPlugin
     ]
   });
 }

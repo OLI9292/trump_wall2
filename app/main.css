@@ -3,21 +3,29 @@ html {
 }
 
 body {
-  background-color: cornsilk;
   height: 100%;
   width: 1100px;
+  margin: auto;
 }
 
-.trump-columns {
-  height: 100%;
+h1#main-heading {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 58px;
+  letter-spacing: 1px;
+  margin-left: 10px;
+  line-height: 0px;
 }
 
-table {
+h3#build-heading {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  height: 30px;
 }
 
 tbody {
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  bottom: 20px;
 }
 
 td {
@@ -30,31 +38,131 @@ td {
   font-style: italic;
   text-align: center;
   cursor: pointer;
-  color: #696969; 
+  color: black; 
 }
 
 td:hover {
   border-color: #ffd700;
 }
 
-.profileForm {
-  display: block;
-  width: 200px;
-  margin-top: 50px;
-  float: right;
+.profileForm, .profileView {
+  width: 180px;
+  right: 0;
+  position: fixed;
+  background-color: white;
+  padding-top: 15px;
+  bottom: -91px;
+  padding-right: 40px;
+  padding-left: 20px;
+  height: 100%;
 }
 
 .profileForm input[type="file"] {
-  height: 200px;
+  height: 180px;
   border: 1px solid #c9c9c9;
 }
 
-.profileForm input, textarea {
-  width: 200px;
+.profileForm input[type=text], textarea {
+  width: 175px;
   margin: 10px 0px 10px 0px;
+
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  color: black;
+
+  border: 1px solid black;
+
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+}
+
+.profileForm input[type=text] {
+  padding: 5px 0px 5px 5px; 
 }
 
 .profileForm textarea {
-  height: 100px;
-  padding: 0px 0px 100px 0px;
+  height: 80px;
+  padding: 5px 0px 80px 5px;
 }
+
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px #E61B23;
+  border: 1px solid #E61B23;
+}
+
+button#build {
+  width: 180px;
+  height: 54px;
+
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  background-color: white;
+
+  border: 1px solid black;
+
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+
+  cursor: pointer;
+}
+
+button#build:hover {
+  box-shadow: 0 0 5px #00AEF3;
+  border: 1px solid #00AEF3;
+}
+
+.image-upload {
+  height: 180px;
+}
+
+.image-upload > input {
+  display: none;
+}
+
+.image-upload img {
+  max-width: 20%;
+  position: relative;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+p#brickNo {
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+}
+
+p#information {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+
+p#story {
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-size: 14px;
+}
+/*
+@media all and (max-width: 1200px) {
+    .profileForm{
+      left: 950px;
+    }
+}
+*/
+#wall img {
+  width: 100%;
+  height: auto;
+  margin-top: -20px;
+}
+
