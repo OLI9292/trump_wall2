@@ -34,7 +34,8 @@ td {
 
   border: 1px solid #999;
   
-  font: 15px Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
   font-style: italic;
   text-align: center;
   cursor: pointer;
@@ -153,13 +154,13 @@ p#story {
   font-style: italic;
   font-size: 14px;
 }
-/*
+
 @media all and (max-width: 1200px) {
     .profileForm{
       left: 950px;
     }
 }
-*/
+
 #wall img {
   width: 100%;
   height: auto;
